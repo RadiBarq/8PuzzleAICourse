@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FifteenPuzzle" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qKz-lf-Ypg" userLabel="UIView">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H81-eL-dz5" userLabel="UIToolbar">
+                                <rect key="frame" x="0.0" y="980" width="768" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="ges-Ge-FUf"/>
+                                    <constraint firstAttribute="height" constant="44" id="tFr-1w-5Gf"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem tag="30" title="Shuffle" id="97f-ys-h1c">
+                                        <connections>
+                                            <action selector="shuffleTiles:" destination="BYZ-38-t0r" id="sPQ-cZ-AKk"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem tag="20" title="Numbers" id="iWu-nv-0jp">
+                                        <connections>
+                                            <action selector="switchView:" destination="BYZ-38-t0r" id="odV-0E-HwE"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g19-Pd-5kX" userLabel="BoardView" customClass="BoardView" customModule="FifteenPuzzle" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="768" height="960"/>
+                                <subviews>
+                                    <button opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jke-Zw-khb">
+                                        <rect key="frame" x="-27" y="-16" width="208" height="200"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <state key="normal" title="1" image="1">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tileSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jaI-yu-oB8"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DDK-FU-1rA">
+                                        <rect key="frame" x="-29" y="47" width="211" height="200"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <state key="normal" title="2" image="2">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tileSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CVr-jX-eky"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ifA-h0-mE5">
+                                        <rect key="frame" x="-29" y="110" width="211" height="200"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <state key="normal" title="3" image="3">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tileSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1OC-JB-0hS"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cin-TJ-a4G">
+                                        <rect key="frame" x="-29" y="173" width="212" height="200"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <state key="normal" title="4" image="4">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tileSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W6K-ct-M8w"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" clipsSubviews="YES" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uzq-cB-FNV">
+                                        <rect key="frame" x="-29" y="236" width="211" height="200"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <state key="normal" title="5" image="5">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tileSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qqD-RW-Ph1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" clipsSubviews="YES" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9F7-Ym-trV">
+                                        <rect key="frame" x="-29" y="299" width="212" height="200"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <state key="normal" title="6" image="6">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tileSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Vg-1y-lex"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" clipsSubviews="YES" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AuW-td-F97">
+                                        <rect key="frame" x="-28" y="362" width="210" height="200"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <state key="normal" title="7" image="7">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tileSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="K6A-Qk-KQY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" clipsSubviews="YES" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Isj-3Z-kOJ">
+                                        <rect key="frame" x="8" y="570" width="212" height="200"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <state key="normal" title="8" image="8">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tileSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6QV-Oq-ffc"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="g19-Pd-5kX" firstAttribute="leading" secondItem="3DV-7g-FoF" secondAttribute="leading" id="6aM-bR-TGN"/>
+                            <constraint firstItem="g19-Pd-5kX" firstAttribute="trailing" secondItem="3DV-7g-FoF" secondAttribute="trailing" id="KDI-og-Ufa"/>
+                            <constraint firstItem="H81-eL-dz5" firstAttribute="bottom" secondItem="3DV-7g-FoF" secondAttribute="bottom" id="LKD-s3-mMR"/>
+                            <constraint firstItem="H81-eL-dz5" firstAttribute="top" secondItem="g19-Pd-5kX" secondAttribute="bottom" id="Tvy-8h-Tg4"/>
+                            <constraint firstItem="H81-eL-dz5" firstAttribute="trailing" secondItem="3DV-7g-FoF" secondAttribute="trailing" id="UbK-Li-aWp"/>
+                            <constraint firstItem="H81-eL-dz5" firstAttribute="trailing" secondItem="3DV-7g-FoF" secondAttribute="trailing" id="dnL-fd-2oC"/>
+                            <constraint firstItem="H81-eL-dz5" firstAttribute="leading" secondItem="3DV-7g-FoF" secondAttribute="leading" id="ee2-qg-qrz"/>
+                            <constraint firstItem="H81-eL-dz5" firstAttribute="leading" secondItem="3DV-7g-FoF" secondAttribute="leading" id="i9J-JJ-FWS"/>
+                            <constraint firstItem="g19-Pd-5kX" firstAttribute="top" secondItem="3DV-7g-FoF" secondAttribute="top" id="mqX-df-CU9"/>
+                            <constraint firstItem="H81-eL-dz5" firstAttribute="bottom" secondItem="3DV-7g-FoF" secondAttribute="bottom" id="vej-kQ-Bw5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3DV-7g-FoF"/>
+                    </view>
+                    <connections>
+                        <outlet property="boardView" destination="g19-Pd-5kX" id="aX5-gn-8MH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="31.934032983508249"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="1" width="200" height="200"/>
+        <image name="2" width="200" height="200"/>
+        <image name="3" width="200" height="200"/>
+        <image name="4" width="200" height="200"/>
+        <image name="5" width="200" height="200"/>
+        <image name="6" width="200" height="200"/>
+        <image name="7" width="200" height="200"/>
+        <image name="8" width="200" height="200"/>
+    </resources>
+</document>
