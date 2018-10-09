@@ -38,7 +38,7 @@ class ViewController: UIViewController {
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let board = appDelegate.board
-        let pos = board!.getRowAndColumn(forTile: sender.tag)
+        let pos = board!.getRowAndColumn(forTile: Int(sender.titleLabel!.text!)!)
         let buttonBounds = sender.bounds
         var buttonCenter = sender.center
         var slide = true
@@ -77,19 +77,10 @@ class ViewController: UIViewController {
     @IBAction func shuffleTiles(_ sender: UIBarButtonItem) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let board = appDelegate.board!
-        let shuffle = (sender.tag == 30)
+        board.scramble(numTimes: appDelegate.numShuffles)
+        self.boardView.setNeedsLayout()
+    
         
-        if (shuffle) {
-            board.scramble(numTimes: appDelegate.numShuffles)
-            sender.tag = 31
-            sender.title = "Solve"
-            self.boardView.setNeedsLayout()
-        } else {
-            sender.tag = 30
-            sender.title = "Shuffle"
-            board.resetBoard()
-            self.boardView.setNeedsLayout()
-        }
     }  // end shuffleTiles()
     
     @IBAction func switchView(_ sender: UIBarButtonItem) {
@@ -104,18 +95,43 @@ class ViewController: UIViewController {
             sender.title = "Numbers"
             boardView.switchTileImages(true)
         }
+    }
+    
+  @objc func shuffleClicked(button: UIButton)
+    {
+        print("shuffle clicked")
+    }
+    
+    @objc func hintClicked(_sender: UIBarButtonItem)
+    {
+        
+        print("hint button clicked")
         
     }
+    
+    @objc func solvePuzzleClicked(_sender: UIBarButtonItem)
+    {
+        
+        print("solve puzzle clicked")
+        
+        
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.boardView.shuffleButton.addTarget(self, action: #selector(shuffleTiles(_:)), for: .touchUpInside)
+        
+          self.boardView.hintButton.addTarget(self, action: #selector(hintClicked(_sender:)), for: .touchUpInside)
+        
+        self.boardView.bottomButton.addTarget(self, action: #selector(solvePuzzleClicked(_sender:)), for: .touchUpInside)
+    
+        
+        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+
 
 
 }

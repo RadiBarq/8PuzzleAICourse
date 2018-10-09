@@ -28,10 +28,21 @@ import Foundation
 
 class FifteenBoard {
     var state : [[Int]] =   [
+        
         [1, 2, 3],
         [4, 5, 6],
         [7, 8, 0]
     ]
+    
+    var goalState: [[Int]] = [
+        
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 0]
+        
+    ]
+
+    
     
     let rows = 3
     let cols = 3
@@ -72,6 +83,25 @@ class FifteenBoard {
     func getTile(atRow r: Int, atColumn c: Int) -> Int {
         return state[r][c]
     } // end getTile()
+    
+    func calculateTheHeuristic() -> Int
+    {
+        var heuristic = 0
+        
+        for i in 0..<(rows - 1){
+            
+            for j in  0..<(cols - 1)
+            {
+                if state[i][j] != goalState[i][j]
+                {
+                    heuristic = heuristic + 1
+                }
+            }
+        }
+        
+        return heuristic
+    }
+    
     
     // Find the position of the given tile (0 is used for the space) – returns tuple holding row and column.
     func getRowAndColumn(forTile tile: Int) -> (row: Int, column: Int)? {

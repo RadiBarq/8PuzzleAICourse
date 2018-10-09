@@ -7,7 +7,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     var board : FifteenBoard? // Since both the Board View and the View Controller will want access to this object, let the AppDelegate object own it
-    let numShuffles = 80
+    let numShuffles = 150
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Create and initialize the the board when the application finishes launching
