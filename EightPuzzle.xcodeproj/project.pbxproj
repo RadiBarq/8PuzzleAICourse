@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		9AB9A521203B6AC000BC1669 /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB9A520203B6AC000BC1669 /* BoardView.swift */; };
-		9AB9A523203B7A2100BC1669 /* FifteenBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB9A522203B7A2100BC1669 /* FifteenBoard.swift */; };
+		9AB9A523203B7A2100BC1669 /* EightBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB9A522203B7A2100BC1669 /* EightBoard.swift */; };
 		9AFD04B5203B64A800BC7F80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD04B4203B64A800BC7F80 /* AppDelegate.swift */; };
 		9AFD04B7203B64A800BC7F80 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD04B6203B64A800BC7F80 /* ViewController.swift */; };
 		9AFD04BA203B64A800BC7F80 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AFD04B8203B64A800BC7F80 /* Main.storyboard */; };
-		9AFD04BD203B64A800BC7F80 /* FifteenPuzzle.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD04BB203B64A800BC7F80 /* FifteenPuzzle.xcdatamodeld */; };
+		9AFD04BD203B64A800BC7F80 /* EightPuzzle.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD04BB203B64A800BC7F80 /* EightPuzzle.xcdatamodeld */; };
 		9AFD04BF203B64A800BC7F80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AFD04BE203B64A800BC7F80 /* Assets.xcassets */; };
 		9AFD04C2203B64A800BC7F80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AFD04C0203B64A800BC7F80 /* LaunchScreen.storyboard */; };
+		CDBCD77B216E47FF00E302AB /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CDBCD77A216E47FF00E302AB /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,17 +37,17 @@
 
 /* Begin PBXFileReference section */
 		9AB9A520203B6AC000BC1669 /* BoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
-		9AB9A522203B7A2100BC1669 /* FifteenBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifteenBoard.swift; sourceTree = "<group>"; };
-		9AFD04B1203B64A800BC7F80 /* FifteenPuzzle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FifteenPuzzle.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AB9A522203B7A2100BC1669 /* EightBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EightBoard.swift; sourceTree = "<group>"; };
+		9AFD04B1203B64A800BC7F80 /* EightPuzzle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EightPuzzle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AFD04B4203B64A800BC7F80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9AFD04B6203B64A800BC7F80 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9AFD04B9203B64A800BC7F80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9AFD04BC203B64A800BC7F80 /* FifteenPuzzle.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FifteenPuzzle.xcdatamodel; sourceTree = "<group>"; };
 		9AFD04BE203B64A800BC7F80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9AFD04C1203B64A800BC7F80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		9AFD04C3203B64A800BC7F80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9AFD04C8203B64A800BC7F80 /* FifteenPuzzleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FifteenPuzzleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9AFD04D3203B64A800BC7F80 /* FifteenPuzzleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FifteenPuzzleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AFD04C8203B64A800BC7F80 /* EightPuzzleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EightPuzzleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AFD04D3203B64A800BC7F80 /* EightPuzzleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EightPuzzleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDBCD77A216E47FF00E302AB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +78,7 @@
 		9AFD04A8203B64A700BC7F80 = {
 			isa = PBXGroup;
 			children = (
-				9AFD04B3203B64A800BC7F80 /* FifteenPuzzle */,
+				9AFD04B3203B64A800BC7F80 /* EightPuzzle */,
 				9AFD04B2203B64A800BC7F80 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -85,35 +86,35 @@
 		9AFD04B2203B64A800BC7F80 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9AFD04B1203B64A800BC7F80 /* FifteenPuzzle.app */,
-				9AFD04C8203B64A800BC7F80 /* FifteenPuzzleTests.xctest */,
-				9AFD04D3203B64A800BC7F80 /* FifteenPuzzleUITests.xctest */,
+				9AFD04B1203B64A800BC7F80 /* EightPuzzle.app */,
+				9AFD04C8203B64A800BC7F80 /* EightPuzzleTests.xctest */,
+				9AFD04D3203B64A800BC7F80 /* EightPuzzleUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9AFD04B3203B64A800BC7F80 /* FifteenPuzzle */ = {
+		9AFD04B3203B64A800BC7F80 /* EightPuzzle */ = {
 			isa = PBXGroup;
 			children = (
 				9AFD04B4203B64A800BC7F80 /* AppDelegate.swift */,
 				9AFD04B6203B64A800BC7F80 /* ViewController.swift */,
+				CDBCD77A216E47FF00E302AB /* Info.plist */,
 				9AFD04B8203B64A800BC7F80 /* Main.storyboard */,
 				9AB9A520203B6AC000BC1669 /* BoardView.swift */,
 				9AFD04BE203B64A800BC7F80 /* Assets.xcassets */,
 				9AFD04C0203B64A800BC7F80 /* LaunchScreen.storyboard */,
-				9AFD04C3203B64A800BC7F80 /* Info.plist */,
-				9AFD04BB203B64A800BC7F80 /* FifteenPuzzle.xcdatamodeld */,
-				9AB9A522203B7A2100BC1669 /* FifteenBoard.swift */,
+				9AFD04BB203B64A800BC7F80 /* EightPuzzle.xcdatamodeld */,
+				9AB9A522203B7A2100BC1669 /* EightBoard.swift */,
 			);
-			path = FifteenPuzzle;
+			path = EightPuzzle;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9AFD04B0203B64A800BC7F80 /* FifteenPuzzle */ = {
+		9AFD04B0203B64A800BC7F80 /* EightPuzzle */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9AFD04DC203B64A800BC7F80 /* Build configuration list for PBXNativeTarget "FifteenPuzzle" */;
+			buildConfigurationList = 9AFD04DC203B64A800BC7F80 /* Build configuration list for PBXNativeTarget "EightPuzzle" */;
 			buildPhases = (
 				9AFD04AD203B64A800BC7F80 /* Sources */,
 				9AFD04AE203B64A800BC7F80 /* Frameworks */,
@@ -123,14 +124,14 @@
 			);
 			dependencies = (
 			);
-			name = FifteenPuzzle;
+			name = EightPuzzle;
 			productName = FifteenPuzzle;
-			productReference = 9AFD04B1203B64A800BC7F80 /* FifteenPuzzle.app */;
+			productReference = 9AFD04B1203B64A800BC7F80 /* EightPuzzle.app */;
 			productType = "com.apple.product-type.application";
 		};
-		9AFD04C7203B64A800BC7F80 /* FifteenPuzzleTests */ = {
+		9AFD04C7203B64A800BC7F80 /* EightPuzzleTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9AFD04DF203B64A800BC7F80 /* Build configuration list for PBXNativeTarget "FifteenPuzzleTests" */;
+			buildConfigurationList = 9AFD04DF203B64A800BC7F80 /* Build configuration list for PBXNativeTarget "EightPuzzleTests" */;
 			buildPhases = (
 				9AFD04C4203B64A800BC7F80 /* Sources */,
 				9AFD04C5203B64A800BC7F80 /* Frameworks */,
@@ -141,14 +142,14 @@
 			dependencies = (
 				9AFD04CA203B64A800BC7F80 /* PBXTargetDependency */,
 			);
-			name = FifteenPuzzleTests;
+			name = EightPuzzleTests;
 			productName = FifteenPuzzleTests;
-			productReference = 9AFD04C8203B64A800BC7F80 /* FifteenPuzzleTests.xctest */;
+			productReference = 9AFD04C8203B64A800BC7F80 /* EightPuzzleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		9AFD04D2203B64A800BC7F80 /* FifteenPuzzleUITests */ = {
+		9AFD04D2203B64A800BC7F80 /* EightPuzzleUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9AFD04E2203B64A800BC7F80 /* Build configuration list for PBXNativeTarget "FifteenPuzzleUITests" */;
+			buildConfigurationList = 9AFD04E2203B64A800BC7F80 /* Build configuration list for PBXNativeTarget "EightPuzzleUITests" */;
 			buildPhases = (
 				9AFD04CF203B64A800BC7F80 /* Sources */,
 				9AFD04D0203B64A800BC7F80 /* Frameworks */,
@@ -159,9 +160,9 @@
 			dependencies = (
 				9AFD04D5203B64A800BC7F80 /* PBXTargetDependency */,
 			);
-			name = FifteenPuzzleUITests;
+			name = EightPuzzleUITests;
 			productName = FifteenPuzzleUITests;
-			productReference = 9AFD04D3203B64A800BC7F80 /* FifteenPuzzleUITests.xctest */;
+			productReference = 9AFD04D3203B64A800BC7F80 /* EightPuzzleUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -190,7 +191,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9AFD04AC203B64A800BC7F80 /* Build configuration list for PBXProject "FifteenPuzzle" */;
+			buildConfigurationList = 9AFD04AC203B64A800BC7F80 /* Build configuration list for PBXProject "EightPuzzle" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -203,9 +204,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9AFD04B0203B64A800BC7F80 /* FifteenPuzzle */,
-				9AFD04C7203B64A800BC7F80 /* FifteenPuzzleTests */,
-				9AFD04D2203B64A800BC7F80 /* FifteenPuzzleUITests */,
+				9AFD04B0203B64A800BC7F80 /* EightPuzzle */,
+				9AFD04C7203B64A800BC7F80 /* EightPuzzleTests */,
+				9AFD04D2203B64A800BC7F80 /* EightPuzzleUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -215,6 +216,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDBCD77B216E47FF00E302AB /* Info.plist in Resources */,
 				9AFD04C2203B64A800BC7F80 /* LaunchScreen.storyboard in Resources */,
 				9AFD04BF203B64A800BC7F80 /* Assets.xcassets in Resources */,
 				9AFD04BA203B64A800BC7F80 /* Main.storyboard in Resources */,
@@ -244,9 +246,9 @@
 			files = (
 				9AFD04B7203B64A800BC7F80 /* ViewController.swift in Sources */,
 				9AB9A521203B6AC000BC1669 /* BoardView.swift in Sources */,
-				9AB9A523203B7A2100BC1669 /* FifteenBoard.swift in Sources */,
+				9AB9A523203B7A2100BC1669 /* EightBoard.swift in Sources */,
 				9AFD04B5203B64A800BC7F80 /* AppDelegate.swift in Sources */,
-				9AFD04BD203B64A800BC7F80 /* FifteenPuzzle.xcdatamodeld in Sources */,
+				9AFD04BD203B64A800BC7F80 /* EightPuzzle.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,12 +271,12 @@
 /* Begin PBXTargetDependency section */
 		9AFD04CA203B64A800BC7F80 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9AFD04B0203B64A800BC7F80 /* FifteenPuzzle */;
+			target = 9AFD04B0203B64A800BC7F80 /* EightPuzzle */;
 			targetProxy = 9AFD04C9203B64A800BC7F80 /* PBXContainerItemProxy */;
 		};
 		9AFD04D5203B64A800BC7F80 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9AFD04B0203B64A800BC7F80 /* FifteenPuzzle */;
+			target = 9AFD04B0203B64A800BC7F80 /* EightPuzzle */;
 			targetProxy = 9AFD04D4203B64A800BC7F80 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -412,7 +414,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PSFCZBNLMD;
-				INFOPLIST_FILE = FifteenPuzzle/Info.plist;
+				INFOPLIST_FILE = EightPuzzle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.roncotton.FifteenPuzzle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -427,7 +429,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PSFCZBNLMD;
-				INFOPLIST_FILE = FifteenPuzzle/Info.plist;
+				INFOPLIST_FILE = EightPuzzle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.roncotton.FifteenPuzzle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -448,7 +450,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FifteenPuzzle.app/FifteenPuzzle";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EightPuzzle.app/EightPuzzle";
 			};
 			name = Debug;
 		};
@@ -464,7 +466,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FifteenPuzzle.app/FifteenPuzzle";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EightPuzzle.app/EightPuzzle";
 			};
 			name = Release;
 		};
@@ -501,7 +503,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9AFD04AC203B64A800BC7F80 /* Build configuration list for PBXProject "FifteenPuzzle" */ = {
+		9AFD04AC203B64A800BC7F80 /* Build configuration list for PBXProject "EightPuzzle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9AFD04DA203B64A800BC7F80 /* Debug */,
@@ -510,7 +512,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9AFD04DC203B64A800BC7F80 /* Build configuration list for PBXNativeTarget "FifteenPuzzle" */ = {
+		9AFD04DC203B64A800BC7F80 /* Build configuration list for PBXNativeTarget "EightPuzzle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9AFD04DD203B64A800BC7F80 /* Debug */,
@@ -519,7 +521,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9AFD04DF203B64A800BC7F80 /* Build configuration list for PBXNativeTarget "FifteenPuzzleTests" */ = {
+		9AFD04DF203B64A800BC7F80 /* Build configuration list for PBXNativeTarget "EightPuzzleTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9AFD04E0203B64A800BC7F80 /* Debug */,
@@ -528,7 +530,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9AFD04E2203B64A800BC7F80 /* Build configuration list for PBXNativeTarget "FifteenPuzzleUITests" */ = {
+		9AFD04E2203B64A800BC7F80 /* Build configuration list for PBXNativeTarget "EightPuzzleUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9AFD04E3203B64A800BC7F80 /* Debug */,
@@ -540,13 +542,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		9AFD04BB203B64A800BC7F80 /* FifteenPuzzle.xcdatamodeld */ = {
+		9AFD04BB203B64A800BC7F80 /* EightPuzzle.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				9AFD04BC203B64A800BC7F80 /* FifteenPuzzle.xcdatamodel */,
 			);
 			currentVersion = 9AFD04BC203B64A800BC7F80 /* FifteenPuzzle.xcdatamodel */;
-			path = FifteenPuzzle.xcdatamodeld;
+			path = EightPuzzle.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

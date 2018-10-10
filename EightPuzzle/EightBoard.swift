@@ -26,7 +26,26 @@
 //import UIKit is not needed, this class needs to know nothing of UIKit...
 import Foundation
 
-class FifteenBoard {
+class EightBoard {
+    
+    //kul had surt katb?:(.(. la2 mesh ana hada // hada code el design ma elo bel algorithm nafshaa
+    // bas ele ktbto elo bel aglortihm ele ho el
+    
+    
+    // el application kolo m2sam la 3 things hada bto5doh be software bas bshr7lk 3al sare3
+    // 3enaa el view wel model wel controller... ok
+    // el view ele he el design el he el malf ele 3al shaml ele mtkob 3aleh boardview ....ah
+    // el view bas el design
+    // el model ele he el functions ele btl3ab bel data oe rules oel data nfshaaaa e7na hala2 bel
+    // modeeeel welocme :p .. okk.hahaha ok
+    // el controller brbot ma ben el model wel view ya3ne maslan bas tkbse kabse 3ala button 3al view
+    // el controller btlob function men el model obnfzooo o hek ookkk. el controller ele ho
+    //el malf ele mktob 3aleh viewcontroller. ookkk..okkkkk
+    
+    // 5lena nrkez 3al model hala2 ele e7na feeh okk.
+    
+    // r7 ashr7lk function function kef bsht8el hoon okk..ok
+    
     var state : [[Int]] =   [
         
         [1, 2, 3],
@@ -34,22 +53,36 @@ class FifteenBoard {
         [7, 8, 0]
     ]
     
+    // hay kaman
+    // hay bdlha sabteeeh ma btt8yar, kolshe tmam..okk
     var goalState: [[Int]] = [
-        
         [1, 2, 3],
         [4, 5, 6],
         [7, 8, 0]
-        
     ]
-
     
-    
+    //number of rows and cols constant ma btt8yro
     let rows = 3
     let cols = 3
     
+    // hay dfthom abel shoy bas ma dft 3alehom she.. mesh mt2kd lesa eza hek lazm any way
+    
+    // kolshe tmam..tmaaaaam
+    
+    var open = [Int]()
+    var closes = [Int]()
+    
+    
+
     func random(_ n:Int) -> Int {
         return Int(arc4random_uniform(UInt32(n)))
     } // end random()
+    
+    
+    // ma tt32de men el code eza she mar2t 3aleh mesh mafhom e7kele ok
+    // shu r2yk t3teni aqr2u l7ali awal
+    // okk.
+    // ende men had / onzleee
     
     func swapTile(fromRow r1: Int, Column c1: Int, toRow r2: Int, Column c2: Int) {
         state[r2][c2] = state[r1][c1]
@@ -59,7 +92,12 @@ class FifteenBoard {
     // Choose one of the “slidable” tiles at random and slide it into the empty space; repeat n times. We use this method to start a new game using a large value (e.g., 150) for n.
     func scramble(numTimes n: Int) {
         resetBoard()
+        
+        // eno hoon el 1..n eno men 1 la n el included hoon ok..okk
+        
+        
         for _ in 1...n {
+            
             var movingTiles : [(atRow: Int, Column: Int)] = []
             var numMovingTiles : Int = 0
             for r in 0..<rows {
@@ -84,14 +122,21 @@ class FifteenBoard {
         return state[r][c]
     } // end getTile()
     
+    
+    
     func calculateTheHeuristic() -> Int
     {
         var heuristic = 0
         
-        for i in 0..<(rows - 1){
+        for i in 0..<rows{
             
-            for j in  0..<(cols - 1)
+            for j in  0..<cols
             {
+                if (state[i][j] == 0)
+                {
+                    continue
+                }
+                
                 if state[i][j] != goalState[i][j]
                 {
                     heuristic = heuristic + 1
@@ -167,6 +212,11 @@ class FifteenBoard {
                 swapTile(fromRow: r, Column: c, toRow: r, Column: c+1)
             }
         } // end if canSlideTile
+        
+        var test = calculateTheHeuristic()
+        print(test)
+        
+        
     } // end slideTile()
     
     func isSolved() -> Bool {
@@ -194,3 +244,5 @@ class FifteenBoard {
         }
     } // end resetBoard()
 } // end FifteenBoard()
+//keef b2dr du a5du 3nde // okk // shoy arfa3o kolo 5leke ma3e
+

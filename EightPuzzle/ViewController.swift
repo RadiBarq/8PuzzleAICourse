@@ -58,6 +58,8 @@ class ViewController: UIViewController {
         if slide {
             
             board!.slideTile(atRow: pos!.row, Column: pos!.column)
+            
+    
             // sender.center = buttonCenter // or animate the change
             UIView.animate(withDuration: 0.5, delay: 0, options: [], animations: {sender.center = buttonCenter})
             if (board!.isSolved()) {
@@ -104,16 +106,12 @@ class ViewController: UIViewController {
     
     @objc func hintClicked(_sender: UIBarButtonItem)
     {
-        
         print("hint button clicked")
-        
     }
     
     @objc func solvePuzzleClicked(_sender: UIBarButtonItem)
     {
-        
         print("solve puzzle clicked")
-        
         
     }
     
@@ -126,8 +124,6 @@ class ViewController: UIViewController {
           self.boardView.hintButton.addTarget(self, action: #selector(hintClicked(_sender:)), for: .touchUpInside)
         
         self.boardView.bottomButton.addTarget(self, action: #selector(solvePuzzleClicked(_sender:)), for: .touchUpInside)
-    
-        
         
     }
 

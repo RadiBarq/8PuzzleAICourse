@@ -39,7 +39,7 @@ class BoardView: UIView {
     
     // Auxiliary method that determines the largest square that fits in the center of the board view. We make sure the board size of is a multiple of 8 so the tile centers lie on the integer grid
     
-        var board: FifteenBoard?
+        var board: EightBoard?
     
         public var shuffleButton = UIButton()
         public var hintButton = UIButton()
@@ -58,11 +58,6 @@ class BoardView: UIView {
         
     }
     
-    
-
-    
-
-    
     func initializeBoardDesign()
     {
         self.translatesAutoresizingMaskIntoConstraints = false
@@ -78,7 +73,6 @@ class BoardView: UIView {
     func initializeControlButtons()
     {
         
-    
         self.addSubview(shuffleButton)
         shuffleButton.setTitle("Shuffle", for: .normal)
         
