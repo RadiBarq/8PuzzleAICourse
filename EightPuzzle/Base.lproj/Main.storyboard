@@ -13,12 +13,12 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FifteenPuzzle" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="EightPuzzle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qKz-lf-Ypg" userLabel="UIView">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g19-Pd-5kX" userLabel="BoardView" customClass="BoardView" customModule="FifteenPuzzle" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g19-Pd-5kX" userLabel="BoardView" customClass="BoardView" customModule="EightPuzzle" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
                                 <subviews>
                                     <button opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jke-Zw-khb">
@@ -135,6 +135,14 @@
                     </view>
                     <connections>
                         <outlet property="boardView" destination="g19-Pd-5kX" id="aX5-gn-8MH"/>
+                        <outlet property="eigthButton" destination="Isj-3Z-kOJ" id="oad-cO-SJt"/>
+                        <outlet property="fifthButton" destination="uzq-cB-FNV" id="76T-3f-ZW0"/>
+                        <outlet property="firstButton" destination="Jke-Zw-khb" id="aIR-0a-QrL"/>
+                        <outlet property="fourthButton" destination="Cin-TJ-a4G" id="pGV-E7-NuA"/>
+                        <outlet property="secondButton" destination="DDK-FU-1rA" id="w77-Yg-ZvN"/>
+                        <outlet property="seventhButton" destination="AuW-td-F97" id="OCD-fv-KNt"/>
+                        <outlet property="sixthButton" destination="9F7-Ym-trV" id="DNc-IZ-NSh"/>
+                        <outlet property="thirdButton" destination="ifA-h0-mE5" id="3sQ-Wa-mJm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

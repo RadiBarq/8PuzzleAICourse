@@ -1,38 +1,28 @@
-//
-//  ViewController.swift
-//  FifteenPuzzle
-//
-//  Created by Ron Cotton on 2/19/18.
-// Copyright © 2018 Ron Cotton.
-//
-// Permission is hereby granted, free of charge, to any person obtaining a copy
-// of this software and associated documentation files (the "Software"), to deal
-// in the Software without restriction, including without limitation the rights
-// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-// copies of the Software, and to permit persons to whom the Software is
-// furnished to do so, subject to the following conditions:
-//
-// The above copyright notice and this permission notice shall be included in all
-// copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-// SOFTWARE.
+
 
 import UIKit
 
 class ViewController: UIViewController {
-    // Switch from Standard Editor to Assistant Editor
-    // Control-Click-Drag BoardView
+
     @IBOutlet weak var boardView: BoardView!
-    // Assistant Editor
-    // Control-Click-Drag Button
-    // Change to Action to return function
-    // outlet collection for tileSelected
+    
+    @IBOutlet weak var seventhButton: UIButton!
+    @IBOutlet weak var sixthButton: UIButton!
+    
+    @IBOutlet weak var firstButton: UIButton!
+    
+    @IBOutlet weak var secondButton: UIButton!
+    
+    @IBOutlet weak var thirdButton: UIButton!
+    
+    @IBOutlet weak var fourthButton: UIButton!
+    
+    @IBOutlet weak var fifthButton: UIButton!
+    
+    @IBOutlet weak var eigthButton: UIButton!
+    
+    
+    var buttons = [UIButton]()
     
     @IBAction func tileSelected(_ sender: UIButton) {
         
@@ -42,13 +32,14 @@ class ViewController: UIViewController {
         let buttonBounds = sender.bounds
         var buttonCenter = sender.center
         var slide = true
-        if board!.canSlideTileUp(atRow: pos!.row, Column: pos!.column) {
+     
+        if board!.canSlideTileUp(atRow: pos!.row, Column: pos!.column, currentState: (board?.state)!) {
             buttonCenter.y -= buttonBounds.size.height
-        } else if board!.canSlideTileDown(atRow: pos!.row, Column: pos!.column) {
+        } else if board!.canSlideTileDown(atRow: pos!.row, Column: pos!.column, currentState: (board?.state)!) {
             buttonCenter.y += buttonBounds.size.height
-        } else if board!.canSlideTileLeft(atRow: pos!.row, Column: pos!.column) {
+        } else if board!.canSlideTileLeft(atRow: pos!.row, Column: pos!.column, cunrrentState: (board?.state)!) {
             buttonCenter.x -= buttonBounds.size.width
-        } else if board!.canSlideTileRight(atRow: pos!.row, Column: pos!.column) {
+        } else if board!.canSlideTileRight(atRow: pos!.row, Column: pos!.column, currentState: (board?.state)!) {
             buttonCenter.x += buttonBounds.size.width
         } else {
             
@@ -59,7 +50,6 @@ class ViewController: UIViewController {
             
             board!.slideTile(atRow: pos!.row, Column: pos!.column)
             
-    
             // sender.center = buttonCenter // or animate the change
             UIView.animate(withDuration: 0.5, delay: 0, options: [], animations: {sender.center = buttonCenter})
             if (board!.isSolved()) {
@@ -72,6 +62,8 @@ class ViewController: UIViewController {
                     self.view.window!.transform = CGAffineTransform(rotationAngle: CGFloat.pi * 2.0)
                 }, completion: nil)
             }
+            
+        
         } // end if slide
     } // end tileSelected
     
@@ -106,29 +98,67 @@ class ViewController: UIViewController {
     
     @objc func hintClicked(_sender: UIBarButtonItem)
     {
-        print("hint button clicked")
-    }
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let board = appDelegate.board
+        board?.initializeSolvingComponents()
     
-    @objc func solvePuzzleClicked(_sender: UIBarButtonItem)
-    {
-        print("solve puzzle clicked")
+        let hintString = board?.getSmartHint()
+        
+        let alert = UIAlertController(title: hintString, message: "", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: {(action:UIAlertAction!) in
+            print("you have pressed the ok button")
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
         
     }
     
+    func getButtonFromTitle(title: String) -> UIButton?
+    {
+        for button in buttons{
+            
+            if button.titleLabel?.text == title
+            {
+                
+                return button
+            }
+            
+        }
+        
+        return nil
+        
+    }
+    
+    
+    @objc func solvePuzzleClicked(_sender: UIBarButtonItem)
+    {
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let board = appDelegate.board!
+        board.resetBoard()
+      
+    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.boardView.shuffleButton.addTarget(self, action: #selector(shuffleTiles(_:)), for: .touchUpInside)
         
-          self.boardView.hintButton.addTarget(self, action: #selector(hintClicked(_sender:)), for: .touchUpInside)
+        self.boardView.hintButton.addTarget(self, action: #selector(hintClicked(_sender:)), for: .touchUpInside)
         
         self.boardView.bottomButton.addTarget(self, action: #selector(solvePuzzleClicked(_sender:)), for: .touchUpInside)
         
+        buttons.append(firstButton)
+        buttons.append(secondButton)
+        buttons.append(thirdButton)
+        buttons.append(fourthButton)
+        buttons.append(fifthButton)
+        buttons.append(sixthButton)
+        buttons.append(seventhButton)
+        buttons.append(eigthButton)
+        
+        
     }
-
-
-
-
 }
 
