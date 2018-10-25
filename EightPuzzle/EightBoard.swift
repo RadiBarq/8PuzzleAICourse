@@ -41,12 +41,10 @@ class EightBoard {
          minIndex = 0
          initialiHeuristic = 0
          depth = 1
-        
          open.append(state)
-         openDepths.append(1)
-        
-         openHeuristicArray.append(initialiHeuristic)
+         openDepths.append(0)
          initialiHeuristic = calculateTheHeuristic(child: state)
+         openHeuristicArray.append(initialiHeuristic)
     }
     
     // hay kaman
@@ -70,7 +68,10 @@ class EightBoard {
     
 
     func random(_ n:Int) -> Int {
+        
         return Int(arc4random_uniform(UInt32(n)))
+        
+
     } // end random()
     
 
@@ -101,8 +102,17 @@ class EightBoard {
             var moveRow : Int, moveCol : Int
             (moveRow , moveCol) = movingTiles[randomTile]
             slideTile(atRow: moveRow, Column: moveCol)
+            var value = calculateTheHeuristic(child: state)
+            if (value == 7)
+            {
+                print(value)
+                return
+            }
+         
             
         } // end for i
+        
+        
     } // end scamble()
     
     func getTile(atRow r: Int, atColumn c: Int) -> Int {
@@ -147,8 +157,8 @@ class EightBoard {
             bestMovmentCoordinate = bestMovmentCoordinates[minIndex]
             bestMovmentCoordinates.remove(at: minIndex)
         }
-        
-        if (currentOpenDepth == 1 && bestState != previousBestState && bestState != state)
+            
+        if (currentOpenDepth == 1 && bestState != previousBestState)
         {
             bestMovmentString = String(state[bestMovmentCoordinate.0][bestMovmentCoordinate.1])
             bestNextMove = state
@@ -172,40 +182,39 @@ class EightBoard {
             {
                 var possibleState = checkSlideTitle(atRow: i, Column: j, currentState: bestState)
                 
-                // nafs el apple bzabt bas el parent best state hon best state...
-                if possibleState != bestState && possibleState != previousState
+                if possibleState != bestState //&& possibleState != previousState
                 {
                     
-                    var childHeuristic = calculateTheHeuristic(child: possibleState)
+                    var childHeuristic = calculateTheHeuristic(child: possibleState) +  currentOpenDepth + 1
+    
                     
-                    if let index = checkIfChildExist(open: open, possibleState: possibleState)
-                    {
-                        
-                        if (openHeuristicArray[index] > childHeuristic)
-                        {
-                            openHeuristicArray[index] = childHeuristic
-                        }
-                        
-                    }
-                        
-                    else if let index = checkIfChildExist(open: close, possibleState: possibleState)
+                    if let index = checkIfChildExist(open: close, possibleState: possibleState)
                     {
                         
                         if (closHeuristicArrray[index] > childHeuristic)
                         {
                             bestMovmentCoordinates.append((i, j))
                             open.append(possibleState)
-                            openDepths.append(depth)
+                            openDepths.append(currentOpenDepth + 1)
                             openHeuristicArray.append(childHeuristic)
                             close.remove(at: index )
                             closHeuristicArrray.remove(at: index)
                         }
                     }
                         
+                   else if let index = checkIfChildExist(open: open, possibleState: possibleState)
+                    {
+                        if (openHeuristicArray[index] > childHeuristic)
+                        {
+                            openHeuristicArray[index] = childHeuristic
+                            openDepths[index] = currentOpenDepth + 1
+                        }
+                    }
+ 
                     else{
                         
                         bestMovmentCoordinates.append((i, j))
-                        openDepths.append(depth)
+                        openDepths.append(currentOpenDepth + 1)
                         open.append(possibleState)
                         openHeuristicArray.append(childHeuristic)
                         
@@ -214,9 +223,12 @@ class EightBoard {
             }
         }
         
+        print(currentOpenDepth)
         depth = depth + 1
+            
         close.append(bestState)
         closHeuristicArrray.append(currentHeuristic)
+            
         //  var  bestTileMovmentString = String(previousState[bestMovmentCoordinate.0][bestMovmentCoordinate.1])
         //print(bestTileMovmentString)
         previousState = bestState
