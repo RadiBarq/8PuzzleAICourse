@@ -62,10 +62,6 @@ class EightBoard {
     let rows = 3
     let cols = 3
     
-    // hay dfthom abel shoy bas ma dft 3alehom she.. mesh mt2kd lesa eza hek lazm any way
-    
-    // kolshe tmam..tmaaaaam
-    
 
     func random(_ n:Int) -> Int {
         
@@ -108,10 +104,8 @@ class EightBoard {
                 print(value)
                 return
             }
-         
             
         } // end for i
-        
         
     } // end scamble()
     
@@ -129,6 +123,7 @@ class EightBoard {
             if (i == possibleState){
                 
                 childIndex = indexCounter
+                return childIndex
             }
         
           indexCounter = indexCounter + 1
