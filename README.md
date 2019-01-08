@@ -32,6 +32,6 @@ learn developing MVC iOS app from scratch, The whole A* Algorithm written in swi
 <img src = "https://firebasestorage.googleapis.com/v0/b/chottky.appspot.com/o/App%20Screenshots%2F8puzzle%2FSimulator%20Screen%20Shot%20-%20iPhone%208%20-%202019-01-08%20at%2013.52.26.png?alt=media&token=11f27936-1521-4e9e-b744-48b63fc97867"/>
 <img src = "https://firebasestorage.googleapis.com/v0/b/chottky.appspot.com/o/App%20Screenshots%2F8puzzle%2FSimulator%20Screen%20Shot%20-%20iPhone%208%20-%202019-01-08%20at%2013.52.31.png?alt=media&token=3e0794a4-1d8b-4c6a-97c0-b7ddcb93615d"/>
 
-
-
+<h2>Licence</h2>
+<p>This project is licensed under the MIT License - see the LICENSE.md file for details.</p>
 
