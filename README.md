@@ -23,7 +23,7 @@ learn developing MVC iOS app from scratch, The whole A* Algorithm written in swi
 <li>Only arrays used in the algorithm and no hash tables used.</li>
 <li>The difficulty of the game is medium or easy, the hard level is not available as an option because that will take a very long time for the algorithm to solve.</li>
 <li> The app choose the difficulty level randomly so that the user don't have an option to choose the difficulty.</li>
-<li> The app is very simple so that when the user won we only show him that by rotating the screen</li>
+<li> The app is very simple so that when the user won we only show him that by rotating the screen.</li>
 <li> There is no points for each user and no implementation to save the user highest record.</li>
 </ul>
 
